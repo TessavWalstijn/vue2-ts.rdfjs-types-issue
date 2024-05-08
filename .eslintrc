@@ -1,0 +1,69 @@
+{
+  "root": true,
+  "parser": "vue-eslint-parser",
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser"
+  },
+  "env": {
+    "node": true,
+    "es2022": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:deprecation/recommended",
+    "plugin:prettier/recommended",
+    "@vue/eslint-config-typescript",
+    "plugin:vue/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "no-dupe-else-if": "warn",
+    "no-useless-catch": "warn",
+    "no-unsafe-optional-chaining": "warn",
+    "no-prototype-builtins": "warn",
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": false,
+        "singleQuote": true,
+        "htmlWhitespaceSensitivity": "ignore",
+        "bracketSameLine": false,
+        "trailingComma": "all"
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/explicit-member-accessibility": 0,
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/indent": 0,
+    "@typescript-eslint/ban-ts-comment": "warn",
+    "vue/no-v-for-template-key-on-child": 0,
+    "vue/html-closing-bracket-newline": "off",
+    "vue/no-v-html": 0,
+    "vue/no-template-shadow": 0,
+    "vue/max-attributes-per-line": 0,
+    "vue/attribute-hyphenation": [
+      "warn",
+      "never",
+      {
+        "ignore": ["custom-prop"]
+      }
+    ],
+    "no-debugger": "error",
+    "linebreak-style": ["error", "unix"],
+    "semi": ["error", "never"],
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off",
+    "max-len": 0,
+    "deprecation/deprecation": "warn"
+  },
+  "plugins": ["@typescript-eslint", "deprecation", "eslint-plugin-vue"],
+  "ignorePatterns": [
+    "old-dependencies/**.mjs",
+    "old-dependencies/**.js",
+    "old-dependencies/**.vue",
+    "old-dependencies/**.ts",
+    "tests/e2e/**/**.js"
+  ]
+}

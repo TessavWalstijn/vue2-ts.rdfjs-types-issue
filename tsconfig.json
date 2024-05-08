@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "strict": true,
+    "jsx": "preserve",
+    "types": ["vue", "vite/client", "node"],
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "moduleResolution": "Node10",
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "skipLibCheck": true,
+    "paths": {
+      "@/*": ["src/*"],
+      "react": [""]
+    },
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "tsBuildInfoFile": null
+  },
+  "exclude": ["node_modules", "@types/react"],
+  "include": ["./src/**/*", "./tests/**/*", "./node_modules/@rdfjs/types"],
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  },
+  "vueCompilerOptions": {
+    "target": 2.7,
+    "experimentalUseElementAccessInTemplate": true
+  }
+}
